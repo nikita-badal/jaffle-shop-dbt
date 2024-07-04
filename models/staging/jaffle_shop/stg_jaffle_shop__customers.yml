@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: stg_jaffle_shop__customers
+    description: "This model selects customer data and renames the columns."
+    columns:
+      - name: customer_id
+        description: "The unique identifier for a customer."
+        tests:
+          - not_null
+          - unique
+      - name: customer_name
+        description: "The name of the customer."
