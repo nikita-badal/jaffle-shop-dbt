@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: stg_jaffle_shop__stores
+    description: This model selects stores data and renames the columns.
+    columns:
+      - name: store_id
+        description: The unique identifier for a store.
+        data_tests:
+          - unique
+          - not_null
+          - unique_ids
+      - name: store_name
+      
+
+

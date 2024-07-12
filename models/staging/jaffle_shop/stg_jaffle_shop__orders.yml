@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: stg_jaffle_shop__orders
+    description: This model selects orders data and renames the columns.
+    columns:
+      - name: order_id
+        data_tests:
+          - unique_ids
+      - name: store_id
+        data_tests:
+          - relationships:
+              to: ref('stg_jaffle_shop__stores')
+              field: store_id
+      - name: order_total

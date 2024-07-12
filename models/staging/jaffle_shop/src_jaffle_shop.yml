@@ -9,6 +9,9 @@ sources:
     tables:
       - name: raw_customers
         description: "Raw customer data"
+        freshness:
+          warn_after: {count: 112, period: day}
+          error_after: {count: 365, period: day}
 
       - name: raw_orders
         description: "Raw orders data"
@@ -23,4 +26,6 @@ sources:
         description: "Raw stores data"
 
       - name: raw_supplies
+        description: "Raw supplies data"
+      - name: raw_payments
         description: "Raw supplies data"
